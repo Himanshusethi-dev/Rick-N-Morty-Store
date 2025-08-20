@@ -1,69 +1,57 @@
-# React + TypeScript + Vite
+# Rick and Morty Characters App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A React + TypeScript app built with **Vite**, showcasing characters from the [Rick and Morty API](https://rickandmortyapi.com/).  
+This project demonstrates modern React tooling with **TanStack Router**, **TanStack React Query**, and **TanStack React Table** for routing, data fetching, and table rendering.  
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Features
 
-## Expanding the ESLint configuration
+- 🔄 **Data fetching** with `@tanstack/react-query`  
+- 📄 **Routing with params & search** using `@tanstack/react-router`  
+- 📊 **Table rendering** with `@tanstack/react-table`  
+- ⚡ Fast development with **Vite + HMR**  
+- ✅ Fully typed with **TypeScript**  
+- 🎨 Simple styling with CSS  
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 📂 Project Structure
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+src/
+├── components/ # Reusable UI components
+├── router/ # TanStack Router configuration
+├── CharactersList.tsx
+├── CharacterDetails.tsx
+└── main.tsx
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## 🛠️ Tech Stack
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+- [React](https://react.dev/)  
+- [Vite](https://vitejs.dev/)  
+- [TypeScript](https://www.typescriptlang.org/)  
+- [TanStack Router](https://tanstack.com/router)  
+- [TanStack React Query](https://tanstack.com/query)  
+- [TanStack React Table](https://tanstack.com/table)  
+
+---
+
+## ▶️ Getting Started
+
+1. **Clone the repository**
+   git clone https://github.com/Himanshusethi-dev/Rick-N-Morty-Store.git
+   cd your-repo
+2. npm install
+3. npm run dev
+
+
+📖 Usage
+
+  Visit / or  /characters to browse characters.
+
+  Click on the character title  to navigate to /characters/:id and see details.
+
+  Use pagination controls to navigate between pages
