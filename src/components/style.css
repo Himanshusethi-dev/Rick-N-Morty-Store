@@ -1,0 +1,107 @@
+.charactersListData {
+  background-color: #f9fafb;
+}
+
+.tableGridItem:nth-child(even) {
+  background-color: #f3f4f6; 
+}
+
+.tableGridItem:hover {
+  background-color: #e0f2fe; 
+  transition: background-color 0.2s ease;
+}
+
+th {
+  background-color: #1e3a8a;
+  color: white;
+  font-weight: 600;
+  text-align: left;
+  padding: 12px;
+  font-size: 15px;
+}
+
+.tableGridItemData {
+  padding: 12px;
+  font-size: 14px;
+  color: #374151; 
+  vertical-align: middle;
+}
+
+table {
+  border-collapse: collapse;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0px 3px 6px rgba(0,0,0,0.1);
+}
+td, th {
+  border: 1px solid #e5e7eb; 
+}
+
+button, a {
+  transition: all 0.2s ease;
+}
+button:hover, a:hover {
+  transform: translateY(-2px);
+  box-shadow: 0px 3px 8px rgba(0,0,0,0.2);
+}
+
+.paginationControls {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 10px;
+}
+
+/* Character Details container - full width */
+.characterDetails {
+  width: 100%;
+  min-height: 100vh; /* take full screen height */
+  padding: 32px;
+  background: #f8fafc; /* soft gray background */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Header section (big banner style) */
+.characterHeader {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  margin-bottom: 32px;
+  padding: 24px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.characterHeader img {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  border: 5px solid #e2e8f0;
+  object-fit: cover;
+}
+
+.characterHeader h2 {
+  font-size: 36px;
+  font-weight: 700;
+  color: #1e293b;
+}
+
+/* Info section - full width flex layout */
+.characterInfo {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  padding: 24px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.characterInfo p {
+  font-size: 18px;
+  padding: 12px;
+  border-radius: 8px;
+  background: #f1f5f9;
+  color: #334155;
+}
