@@ -9,7 +9,7 @@ import {
 } from "@tanstack/react-router";
 import { z } from "zod";
 import CharactersList from "./components/CharactersList";
-import CharacterDetails from "./components/characterDetails"
+import CharacterDetails from "./components/CharacterDetails"
 
 
 // Root route
