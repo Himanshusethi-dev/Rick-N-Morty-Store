@@ -4,10 +4,13 @@ import {
   createRootRoute,
   Outlet,
   useSearch,
+  useParams,
   Navigate,
 } from "@tanstack/react-router";
 import { z } from "zod";
 import CharactersList from "./components/CharactersList";
+import CharacterDetails from "./components/characterDetails"
+
 
 // Root route
 const rootRoute = createRootRoute({
@@ -41,6 +44,18 @@ function CharactersListWrapper() {
 }
 
 
+// /characters/:id details
+export const characterDetailsRoute = createRoute({
+  getParentRoute: () => charactersParentRoute,
+  path: "$id",
+  component: CharacterDetailsWrapper,
+});
+
+export function CharacterDetailsWrapper() {
+  const { id } = useParams({ from: characterDetailsRoute.id });
+  return <CharacterDetails id={id} />;
+}
+
 //  Parent /characters
 export const charactersParentRoute = createRoute({
   getParentRoute: () => rootRoute,
@@ -58,7 +73,7 @@ export const homeRoute = createRoute({
 // Build route tree
 export const routeTree = rootRoute.addChildren([
   homeRoute,
-  charactersParentRoute.addChildren([charactersRoute]),
+  charactersParentRoute.addChildren([charactersRoute, characterDetailsRoute]),
 ]);
 
 export const router = createRouter({
